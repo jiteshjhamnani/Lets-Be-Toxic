@@ -29,9 +29,9 @@ tfidf = joblib.load("tfidf.pkl")
 label_cols = ['toxic', 'severe_toxic', 'obscene', 'threat', 'insult', 'identity_hate']
 
 # Streamlit App Config
-st.set_page_config(page_title="Toxic Comment Classifier", layout="centered")
-st.title("  Toxic Comment Classifier")
-st.markdown("Enter a comment below to check if it is toxic and what type of toxicity it may contain.")
+st.set_page_config(page_title="CleanSpeak", layout="centered")
+st.title("  CleanSpeak  ")
+st.markdown("CleanSpeak is a smart and lightweight tool that identifies toxic language in user comments using NLP and a trained multi-label classification model.")
 
 # Full-width text input box
 with st.container():
@@ -41,7 +41,7 @@ with st.container():
 # Centered Predict Button
 col1, col2, col3 = st.columns([1, 1, 1])
 with col2:
-    if st.button("Predict Toxicity", key="predict_button"):
+    if st.button("Clean or Mean?", key="predict_button"):
         if text_input.strip() == "":
             st.warning("Please enter some text.")
         else:
